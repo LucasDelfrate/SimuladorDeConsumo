@@ -1,0 +1,33 @@
+<section class="container">
+    <div class="header">
+        <h1 class="tittle">Informe os dados referentes ao dispositivo</h1>
+    </div>
+    <div class="content">
+        <div class="device-header">
+            <h4 class="device-tittle">{{ device.nome }}</h4>
+            <img [src]=" device.imagem " [alt]=" device.imagem " class="device-img">
+        </div>
+        <form class="form-group">
+            <div class="form">
+                <label for="velocidade-2.4">Velocidade 2.4GHz</label>
+                <input [value]="speed2" class="form-input">
+            </div>
+            <div class="form">
+                <label for="nivel-2.4">Nível de sinal 2.4GHz</label>
+                <input [value]="level2" class="form-input">
+            </div>
+            <div class="form">
+                <label for="velocidade-5">Velocidade 5GHz</label>
+                <input [value]="speed5" class="form-input">
+            </div>
+            <div class="form">
+                <label for="nivel-5">Nível de sinal 5GHz</label>
+                <input [value]="level5" class="form-input">
+            </div>
+            <div class="div-btn">
+                <button (click)="onClose()" class="btn">Salvar dispositivo</button>
+            </div>
+        </form>
+    </div>
+    
+</section>

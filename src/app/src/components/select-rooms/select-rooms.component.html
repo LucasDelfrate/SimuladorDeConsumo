@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <h3 class="tittle">Configuração do ambiente</h3>
+</div>
+<div class="container">
+    <p>Dê um nome ao seu ambiente:</p>
+    <input type="text" [(ngModel)]="inputText" class="input-text">
+</div>
+<section class="container">
+    <div *ngFor="let item of room">
+        <div class="rooms-cards-container">
+            <button (click)="addRoom(item)" class="btn">
+                <div class="rooms-cards">
+                    <img [style.border]="item.isSelected ? 'solid 3px cadetblue' : 'none'" [src]="item.imagem" [alt]="item.imagem" style="width: 120px;" id="room-img">
+                    <p class="rooms-tittle">{{ item.nome }}</p>
+                </div>
+            </button>
+        </div>
+    </div>
+</section>
+<div class="btn-div">
+    <button type="submit" (click)="onClose()" class="btn">Salvar</button>
+    <p (click)="limpar()" class="limpar">Limpar seleção</p>
+</div>

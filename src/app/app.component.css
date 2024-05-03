@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header-container{
+    background-color: cadetblue;
+    .tittle{
+        color: white;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: sans-serif;
+    }
+}
+
+.rooms-container{
+    .add-rooms{
+        padding: 15px;
+        display: flex;
+        gap: 10px;
+            .add-tittle{
+                padding: 5px;
+            }
+            .mat-icon{
+                cursor: pointer;
+                font-size: 30px;
+                padding: 5px;
+            }
+            .mat-icon:hover{
+                color: cadetblue;
+            }
+    }
+    .rooms{
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+        .cards{
+            border: 4px solid rgba(131, 220, 223, 0.582);
+            min-height: 350px;
+            width: 300px;
+            background-color: rgba(95, 158, 160, 0.13);
+            border-radius: 5%;
+            text-align: center;
+            justify-content: space-evenly;
+            align-items: center;
+            .div-top{
+                height: 30px;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                
+                .room-tittle{
+                    padding: 5px;
+                    text-align: center;
+                    color: cadetblue;
+                }
+                .room-img{
+                    width: 220px;
+                    border-radius: 5px;
+                }
+            }
+            .div-bot{
+                justify-content: center;
+                color: cadetblue;
+                display: flex;
+                position: relative;
+                top: 180px;
+                gap: 10px;
+                .mat-icon{
+                    cursor: pointer;
+                }
+                .mat-icon:hover{
+                    color: rgb(68, 114, 116);
+                }
+            }
+            .close{
+                position: relative;
+                bottom: 58px;
+                left: 130px;
+                color: rgb(68, 114, 116);
+                cursor: pointer;
+            }
+            .close:hover{
+                color: red;
+                
+            }
+            .devices{
+            gap: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: start !important;
+            position: relative;
+            top: 140px;
+            padding: 0px 15px 0px 15px;
+            .device{
+                min-height: 70px !important;
+                max-height: 70px !important;
+                min-width: 50px !important;
+                max-width: 50px !important;
+                overflow: hidden;
+                text-overflow: ellipsis !important;
+                    .btn{
+                    min-height: 70px !important;
+                    max-height: 70px !important;
+                    min-width: 50px !important;
+                    max-width: 50px !important;
+                    border: 0;
+                    cursor: pointer;
+                        .devices-tittle{
+                            max-width: 50px;
+                            font-size: 8px !important;
+                            margin: 0;
+                            text-wrap: nowrap;
+                            
+                        }
+                        .device-img{
+                            width: 50px;
+                            
+                        }
+                    }
+
+                }
+            }
+        }
+        
+    }
+    .room-name{
+        display: flex;
+        font-size: 18px;
+        font-weight: bold;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+}

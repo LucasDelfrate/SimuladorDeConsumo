@@ -1,0 +1,82 @@
+.modal-header{
+    height: 40px;
+    background-color: cadetblue;
+    color: white;
+    .tittle{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+}
+.container{
+    flex-wrap: wrap;
+    margin-top: 15px;
+    justify-content: center;
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    .input-text{
+        width: 60%;
+        align-items: center;
+        max-height: 20px;
+    }
+
+    .rooms-cards-container{
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        max-width: 100%;
+
+        .rooms-cards{
+            padding: 6px 3px 8px 3px;
+            width: 130px;
+            height: 110px;
+            .rooms-tittle{
+                font-size: 10px;
+                text-align: center;
+            }
+            #room-img {
+                border-radius: 20%;
+            }
+        }
+        .btn{
+            height: 100%;
+            background-color: transparent;
+            border: 0px;
+            cursor: pointer;
+            .mat-icon:hover{
+                color: bisque;
+            }
+        }
+    }
+}
+.btn-div{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    .btn{
+        width: 75%;
+        height: 35px;
+        background-color: rgb(95, 158, 160);
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: rgba(95, 158, 160, 0.87);
+    }
+    .limpar{
+        font-size: 11px;
+        padding-top: 4px;
+        cursor: pointer;
+        color: cadetblue;
+
+        &:hover{
+            color: rgb(59, 85, 87);
+        }
+    }
+}
+
