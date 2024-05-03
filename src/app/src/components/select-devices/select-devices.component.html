@@ -43,6 +43,10 @@
                     <label for="nivel-5">Nível de sinal 5GHz</label>
                     <input [(ngModel)]="selectedDevice.level5" class="form-input" name="level5">
                 </div>
+                <div class="form">
+                    <label for="interferencia">Interferencia</label>
+                    <input [(ngModel)]="selectedDevice.interferencia" class="form-input" name="interferencia">
+                </div>
                 <div class="div-btn">
                     <button type="submit" (click)="onClose()" class="btn">Salvar dispositivo</button>
                 </div>

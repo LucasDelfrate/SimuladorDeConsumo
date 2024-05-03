@@ -30,6 +30,7 @@ export class SelectRoomsComponent implements OnInit{
       speed5: '',
       level2: '',
       level5: '',
+      interferencia: ''
     }
   ]
   room: Room[] = [

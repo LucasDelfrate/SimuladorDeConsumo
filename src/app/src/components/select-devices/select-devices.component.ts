@@ -28,7 +28,8 @@ export class SelectDevicesComponent implements OnInit{
     speed2: '',
     speed5: '',
     level2: '',
-    level5: ''
+    level5: '',
+    interferencia: ''
   };
   devices: Device[] = [
     {
@@ -38,7 +39,9 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
+      
     },
     {
       nome: 'Aparelho de som',
@@ -47,7 +50,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Aquecedor',
@@ -56,7 +60,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Ar condicionado',
@@ -65,7 +70,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Baby liss',
@@ -74,7 +80,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Barbeador',
@@ -83,7 +90,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Batedeira',
@@ -92,7 +100,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Cafeteira elétrica',
@@ -101,7 +110,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Carregador de celular',
@@ -110,7 +120,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Central de alarme',
@@ -119,7 +130,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Chapinha',
@@ -128,7 +140,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Churrasqueira elétrica',
@@ -137,7 +150,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Chuveiro',
@@ -146,7 +160,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Computador',
@@ -155,7 +170,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Cortador de grama',
@@ -164,7 +180,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Desumidificador',
@@ -173,7 +190,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Espremedor',
@@ -182,7 +200,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Exaustor',
@@ -191,7 +210,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Faca elétrica',
@@ -200,7 +220,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Fogão elétrico',
@@ -209,7 +230,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Forno elétrico',
@@ -218,7 +240,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Freezer',
@@ -227,7 +250,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Fritadeira elétrica',
@@ -236,7 +260,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Geladeira',
@@ -245,7 +270,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Grill',
@@ -254,7 +280,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Hidromassagem',
@@ -263,7 +290,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Home theater',
@@ -272,7 +300,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Impressora',
@@ -281,7 +310,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Inalador',
@@ -290,7 +320,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Lâmpada fluorecente',
@@ -299,7 +330,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Lâmpada LED',
@@ -308,7 +340,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Lençol elétrico',
@@ -317,7 +350,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Limpador a vapor',
@@ -326,7 +360,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Liquidificador',
@@ -335,7 +370,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Lavadora de alta pressão',
@@ -344,7 +380,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Limpador a vapor',
@@ -353,7 +390,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Microondas',
@@ -362,7 +400,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Motor elétrico',
@@ -371,7 +410,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Rádio relógio',
@@ -380,7 +420,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Receptor',
@@ -389,7 +430,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Sanduicheira',
@@ -398,7 +440,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Scanner',
@@ -407,7 +450,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Secador de cabelo',
@@ -416,7 +460,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Telefone sem fio',
@@ -425,7 +470,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Televisor',
@@ -434,7 +480,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Torradeira',
@@ -443,7 +490,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Ventilador',
@@ -452,7 +500,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     },
     {
       nome: 'Video game',
@@ -461,7 +510,8 @@ export class SelectDevicesComponent implements OnInit{
       speed2: '',
       speed5: '',
       level2: '',
-      level5: ''
+      level5: '',
+      interferencia: ''
     }
   ]
 
@@ -469,6 +519,7 @@ export class SelectDevicesComponent implements OnInit{
   speed5: string = '';
   level2: string = '';
   level5: string = '';
+
   originalDevices!: Device[];
   devicesSelected: Device[] = []
   isSelected: boolean = false;
