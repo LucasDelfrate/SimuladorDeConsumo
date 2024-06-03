@@ -21,74 +21,102 @@ export class SelectRoomsComponent implements OnInit{
   ){}
 
   inputText: string = ''
-  devices: Device[] = [
-    {
-      nome:'',
-      imagem: '',
-      isSelected: false, 
-      speed2: '',
-      speed5: '',
-      level2: '',
-      level5: '',
-      interferencia: ''
-    }
-  ]
   room: Room[] = [
     {
       id: undefined,
       nome: 'Cozinha',
       imagem: '/assets/imgs/cozinha.jpg',
       isSelected: false,
-      devices: this.devices
+      speed2: 0,
+      interferencia: 0,
+      level2: 0,
+      level5: 0,
+      speed5: 0,
+      temConfig: false
     },
     {
       id: undefined,
       nome: 'Quarto',
       imagem: '/assets/imgs/quarto.jpg',
       isSelected: false,
-      devices: this.devices
+      speed2: 0,
+      interferencia: 0,
+      level2: 0,
+      level5: 0,
+      speed5: 0,
+      temConfig: false
     },
     {
       id: undefined,
       nome: 'Banheiro',
       imagem: '/assets/imgs/banheiro.jpg',
       isSelected: false,
-      devices: this.devices
+      speed2: 0,
+      interferencia: 0,
+      level2: 0,
+      level5: 0,
+      speed5: 0,
+      temConfig: false
     },
     {
       id: undefined,
       nome: 'Sala',
       imagem: '/assets/imgs/sala-de-estar.jpg',
       isSelected: false,
-      devices: this.devices
+      speed2: 0,
+      interferencia: 0,
+      level2: 0,
+      level5: 0,
+      speed5: 0,
+      temConfig: false
     },
     {
       id: undefined,
       nome: 'Escritório',
       imagem: '/assets/imgs/escritorio.jpg',
       isSelected: false,
-      devices: this.devices
+      speed2: 0,
+      interferencia: 0,
+      level2: 0,
+      level5: 0,
+      speed5: 0,
+      temConfig: false
     },
     { 
       id: undefined,
       nome: 'Lavanderia',
       imagem: '/assets/imgs/lavanderia.jpg',
       isSelected: false,
-      devices: this.devices
+      speed2: 0,
+      interferencia: 0,
+      level2: 0,
+      level5: 0,
+      speed5: 0,
+      temConfig: false
     },
     { 
       id: undefined,
       nome: 'Garagem',
       imagem: '/assets/imgs/garagem.jpg',
       isSelected: false,
-      devices: this.devices
+      speed2: 0,
+      interferencia: 0,
+      level2: 0,
+      level5: 0,
+      speed5: 0,
+      temConfig: false
     },
     {
       id: undefined,
       nome: 'Genérico',
       imagem: '/assets/imgs/generico.png',
       isSelected: false,
-      devices: this.devices
+      speed2: 0,
+      interferencia: 0,
+      level2: 0,
+      level5: 0,
+      speed5: 0,
+      temConfig: false
     }, 
   ]
   roomsSelected: Room[] = []

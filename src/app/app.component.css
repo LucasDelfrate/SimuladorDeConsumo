@@ -87,40 +87,22 @@
                 
             }
             .devices{
+            color: rgb(68, 114, 116);
             gap: 5px;
             display: flex;
             flex-wrap: wrap;
             text-align: start !important;
             position: relative;
-            top: 140px;
+            top: 160px;
             padding: 0px 15px 0px 15px;
-            .device{
-                min-height: 70px !important;
-                max-height: 70px !important;
-                min-width: 50px !important;
-                max-width: 50px !important;
-                overflow: hidden;
-                text-overflow: ellipsis !important;
-                    .btn{
-                    min-height: 70px !important;
-                    max-height: 70px !important;
-                    min-width: 50px !important;
-                    max-width: 50px !important;
-                    border: 0;
-                    cursor: pointer;
-                        .devices-tittle{
-                            max-width: 50px;
-                            font-size: 8px !important;
-                            margin: 0;
-                            text-wrap: nowrap;
-                            
-                        }
-                        .device-img{
-                            width: 50px;
-                            
-                        }
-                    }
-
+            justify-content: space-evenly;
+                .label{
+                    font-size: 13px;
+                    padding-right: 10px;
+                }
+                .value{
+                    font-size: 11px;
+                    font-weight: 500;
                 }
             }
         }
@@ -134,4 +116,74 @@
         text-align: center;
         align-items: center;
     }
+}
+
+.section-card-config{
+    display: flex;
+    justify-content: center;
+
+    .card-config{
+        border: 4px solid rgba(131, 220, 223, 0.582);
+        min-height: 550px;
+        width: 400px;
+        background-color: rgba(95, 158, 160, 0.13);
+        border-radius: 5%;
+        text-align: center;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .tittle{
+            color: rgb(68, 114, 116);;
+            height: 30px;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-group{
+            color: rgb(68, 114, 116);
+            flex-direction: column;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+
+            .form{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                width: 80%;
+
+                input{
+                    width: 100%;
+                    height: 30px;
+                }
+                label{
+                    text-align: start;
+                }
+            }
+            .div-btn{
+            width: 80%;
+                button{
+                    width: 100%;
+                    height: 35px;
+                    background-color: rgb(95, 158, 160);
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: rgba(95, 158, 160, 0.87);
+                    }
+                }
+            }
+        }
+    }
+    .room-img{
+        border: 4px solid rgba(131, 220, 223, 0.582);
+        border-radius: 5%;
+    }
+}
+
+.voltar{
+    position: relative;
+    top: -620px;
+    right: -1500px;
 }

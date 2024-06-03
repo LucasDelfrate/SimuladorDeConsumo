@@ -4,28 +4,32 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
 import { SelectRoomsComponent } from './src/components/select-rooms/select-rooms.component';
 import { Room } from './interfaces/room.interface';
-import { NgForOf } from '@angular/common';
-import { SelectDevicesComponent } from './src/components/select-devices/select-devices.component';
-import { DeviceComponentInputComponent } from './src/components/device-component-input/device-component-input.component';
+import { CommonModule, NgForOf } from '@angular/common';
 import { Device } from './interfaces/device.interface';
+import { FormGroup, FormBuilder, FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatIconModule, NgForOf],
+  imports: [RouterOutlet, MatIconModule, NgForOf, CommonModule, FormsModule ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  constructor(public dialog: MatDialog) { }
   title = 'projeto-simulador-consumo';
   roomTittle: string = ''
   roomsSelected: Room[] = [];
   roomLength: number = 0;
+  configRoom: boolean = false;
+  currentRoom!: Room;
+  
+  constructor(public dialog: MatDialog,
+  ) { 
 
+  }
   openSelectedRooms(): void{
     const dialogRef = this.dialog.open(SelectRoomsComponent, {
-      width: '40%',
+      width: '50%',
       height: '65%',
       data: {
         roomTittle: this.roomTittle,
@@ -43,25 +47,9 @@ export class AppComponent {
     
   }
   openSelectedDevices(item: Room): void {
+    this.configRoom = true;
+    this.currentRoom = item;
     
-    const dialogRef = this.dialog.open(SelectDevicesComponent, {
-      width: '40%',
-      height: '65%',
-      data: {
-        roomLength: this.roomsSelected.length,
-      }
-      
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      
-          this.roomsSelected.forEach(room => {
-            if(room.id == item.id){
-              room.devices = room.devices.filter(device => device.nome != '');
-              room.devices.push(result.device);
-            }
-          })
-          
-    });
   }
   removeRoom(item: Room){
     this.roomsSelected = this.roomsSelected.filter(val => item.id != val.id);
@@ -69,15 +57,23 @@ export class AppComponent {
       room.id = index + 1;
     });
   }
-  showDevice(item: Device){
-    const dialogRef = this.dialog.open(SelectDevicesComponent, {
-      width: '40%',
-      height: '65%',
-      data: {
-        device: item,
-        isSelected: true,
+  saveConfig(){
+    this.configRoom = false;
+    this.roomsSelected.forEach((room)=>{
+      if(room.id == this.currentRoom.id){
+        room.temConfig = true;
       }
-      
-    });
+    })
+  }
+  voltar(){
+    this.configRoom = false;
+  }
+  limparConfig(room: Room){
+    room.temConfig = false;
+    room.level2 = 0;
+    room.level5 = 0;
+    room.speed2 = 0;
+    room.speed5 = 0;
+    room.interferencia = 0;
   }
 }

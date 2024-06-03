@@ -2,34 +2,92 @@
   <h1 class="tittle">Simulador de consumo</h1>  
 </div>
 <main>
-  <section class="rooms-container">
-    <div class="add-rooms">
-      <h1 class="add-tittle">Adicione um cômodo ao seu ambiente</h1>
-        <mat-icon (click)="openSelectedRooms()" fontIcon="add_circle_outlined" ></mat-icon>
-    </div>
-    <div class="room-name">
-      <h1>{{ roomTittle }}</h1>
-    </div>
-    <div class="rooms">
-        <div *ngFor="let item of roomsSelected" class="cards">
-            <div class="div-top">
-              <p class="room-tittle">{{ item.nome }}</p>
-              <img [src]="item.imagem" [alt]="item.imagem" class="room-img">
-            </div>
-            <div class="div-bot">
-              <p>Adicione um novo dispositivo</p>
-                <mat-icon fontIcon="add_circle_outlined" (click)="openSelectedDevices(item)"></mat-icon>
-            </div>
-            <mat-icon class="close" (click)="removeRoom(item)">close</mat-icon>
-            <div class="devices">
-              <div *ngFor="let device of item.devices" class="device">
-                <button (click)="showDevice(device)" class="btn">
-                  <p class="devices-tittle">{{ device.nome }}</p>
-                  <img [src]="device.imagem" [alt]="device.imagem" class="device-img">
-                </button>
+  <ng-container *ngIf="!configRoom">
+    <section class="rooms-container">
+      <div class="add-rooms">
+        <h1 class="add-tittle">Adicione um cômodo ao seu ambiente</h1>
+          <mat-icon (click)="openSelectedRooms()" fontIcon="add_circle_outlined" ></mat-icon>
+      </div>
+      <div class="room-name">
+        <h1>{{ roomTittle }}</h1>
+      </div>
+      <div class="rooms">
+          <div *ngFor="let item of roomsSelected" class="cards">
+              <div class="div-top">
+                <p class="room-tittle">{{ item.nome }}</p>
+                <img [src]="item.imagem" [alt]="item.imagem" class="room-img">
+              </div>
+              <div class="div-bot" *ngIf="!item.temConfig">
+                <p>Adicione uma medição ao cômodo</p>
+                  <mat-icon fontIcon="add_circle_outlined" (click)="openSelectedDevices(item)"></mat-icon>
+              </div>
+              <mat-icon class="close" (click)="removeRoom(item)" [style.bottom.px]="item.temConfig ? '27' : ''">close</mat-icon>
+              <div class="devices">
+                <div class="room-info" *ngIf="item.temConfig">
+                  <div>
+                    <span class="label">Velocidade 2.4GHz:</span>
+                    <span class="value">{{ item.speed2 + ' Mbps'}}</span>
+                  </div>
+                  <div>
+                    <span class="label">Nível de sinal 2.4GHz:</span>
+                    <span class="value">{{ item.level2 + ' dbm'}}</span>
+                  </div>
+                  <div>
+                    <span class="label">Velocidade 5GHz:</span>
+                    <span class="value">{{ item.speed5 + ' Mbps'}}</span>
+                  </div>
+                  <div>
+                    <span class="label">Nível de sinal 5GHz:</span>
+                    <span class="value">{{ item.level5 + ' dbm'}}</span>
+                  </div>
+                  <div>
+                    <span class="label">Interferência</span>
+                    <span class="value">{{ item.interferencia + ' dbm'}}</span>
+                  </div>
                 </div>
-            </div>
+                <div>
+                  <mat-icon (click)="openSelectedDevices(item)" *ngIf="item.temConfig" style="font-size: 16px;">edit_outlined</mat-icon>
+                  <mat-icon (click)="limparConfig(item)" *ngIf="item.temConfig" style="font-size: 16px;">close</mat-icon>
+                </div>
+              </div>
+          </div>
+      </div>
+    </section>
+  </ng-container>
+  <ng-container *ngIf="configRoom">
+    <section class="section-card-config">
+      <div class="card-config">
+        <h1 class="tittle">{{ currentRoom.nome }}</h1>
+        <form class="form-group">
+          <div class="form">
+              <label for="velocidade-2.4">Velocidade 2.4GHz</label>
+              <input id="velocidade-2.4" [(ngModel)]="currentRoom.speed2" class="form-input" name="vl2">
+          </div>
+          <div class="form">
+              <label for="nivel-2.4">Nível de sinal 2.4GHz</label>
+              <input id="nivel-2.4"  [(ngModel)]="currentRoom.level2" class="form-input" name="sn2">
+          </div>
+          <div class="form">
+              <label for="velocidade-5">Velocidade 5GHz</label>
+              <input id="velocidade-5" [(ngModel)]="currentRoom.speed5" class="form-input" name="vl5">
+          </div>
+          <div class="form">
+              <label for="nivel-5">Nível de sinal 5GHz</label>
+              <input id="nivel-5" [(ngModel)]="currentRoom.level5" class="form-input" name="sn5">
+          </div>
+          <div class="form">
+            <label for="nivel-5">Interferência</label>
+            <input id="nivel-5" [(ngModel)]="currentRoom.interferencia" class="form-input" name="int">
         </div>
-    </div>
-  </section>
+          <div class="div-btn">
+              <button (click)="saveConfig()" class="btn">Salvar dispositivo</button>
+          </div>
+        </form> 
+      </div>
+      <div>
+        <img [src]="currentRoom.imagem" [alt]="currentRoom.imagem" class="room-img">
+      </div>
+    </section>
+    <mat-icon (click)="voltar()" class="voltar">close</mat-icon>
+  </ng-container>
 </main>

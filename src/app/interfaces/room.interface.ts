@@ -5,5 +5,10 @@ export interface Room {
     nome: string;
     imagem: string;
     isSelected: boolean;
-    devices: Device[];
+    speed2: number;
+    speed5: number;
+    level2: number;
+    level5: number;
+    interferencia: number;
+    temConfig: boolean
   }
