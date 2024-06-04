@@ -2,11 +2,12 @@
   <h1 class="tittle">Simulador de consumo</h1>  
 </div>
 <main>
-  <ng-container *ngIf="!configRoom">
+  <ng-container *ngIf="!configRoom && !grafico">
     <section class="rooms-container">
       <div class="add-rooms">
         <h1 class="add-tittle">Adicione um cômodo ao seu ambiente</h1>
           <mat-icon (click)="openSelectedRooms()" fontIcon="add_circle_outlined" ></mat-icon>
+          <mat-icon *ngIf="roomsSelected.length > 0" (click)="abrirGrafico()">addchart</mat-icon>
       </div>
       <div class="room-name">
         <h1>{{ roomTittle }}</h1>
@@ -54,26 +55,26 @@
       </div>
     </section>
   </ng-container>
-  <ng-container *ngIf="configRoom">
+  <ng-container *ngIf="configRoom && !grafico">
     <section class="section-card-config">
       <div class="card-config">
         <h1 class="tittle">{{ currentRoom.nome }}</h1>
         <form class="form-group">
           <div class="form">
-              <label for="velocidade-2.4">Velocidade 2.4GHz</label>
-              <input id="velocidade-2.4" [(ngModel)]="currentRoom.speed2" class="form-input" name="vl2">
-          </div>
-          <div class="form">
               <label for="nivel-2.4">Nível de sinal 2.4GHz</label>
               <input id="nivel-2.4"  [(ngModel)]="currentRoom.level2" class="form-input" name="sn2">
           </div>
           <div class="form">
-              <label for="velocidade-5">Velocidade 5GHz</label>
-              <input id="velocidade-5" [(ngModel)]="currentRoom.speed5" class="form-input" name="vl5">
+            <label for="nivel-5">Nível de sinal 5GHz</label>
+            <input id="nivel-5" [(ngModel)]="currentRoom.level5" class="form-input" name="sn5">
           </div>
           <div class="form">
-              <label for="nivel-5">Nível de sinal 5GHz</label>
-              <input id="nivel-5" [(ngModel)]="currentRoom.level5" class="form-input" name="sn5">
+              <label for="velocidade-2.4">Velocidade 2.4GHz</label>
+              <input id="velocidade-2.4" [(ngModel)]="currentRoom.speed2" class="form-input" name="vl2">
+          </div>
+          <div class="form">
+              <label for="velocidade-5">Velocidade 5GHz</label>
+              <input id="velocidade-5" [(ngModel)]="currentRoom.speed5" class="form-input" name="vl5">
           </div>
           <div class="form">
             <label for="nivel-5">Interferência</label>
@@ -90,4 +91,14 @@
     </section>
     <mat-icon (click)="voltar()" class="voltar">close</mat-icon>
   </ng-container>
+  <mat-icon *ngIf="grafico" (click)="sairDoGrafico()" style="cursor: pointer; position: relative; left: 30px;">arrow_back_ios_new</mat-icon>
+  <div class="chart-container">
+    <div class="chart">
+      <canvas  id="MyChart" >{{ chart }}</canvas>
+    </div>
+    <div class="divisao" *ngIf="grafico"></div>
+    <div class="chart">
+      <canvas  id="MyChart2" >{{ chart2 }}</canvas>
+    </div>
+  </div>
 </main>

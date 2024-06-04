@@ -187,3 +187,24 @@
     top: -620px;
     right: -1500px;
 }
+
+.chart-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+    gap: 10px;
+
+    .divisao{
+        width: 100%;
+        border-top: 1px solid cadetblue;
+        margin: 20px;
+    }
+
+    .chart{
+        align-self: center;
+        width: 80%;
+
+    }
+}
