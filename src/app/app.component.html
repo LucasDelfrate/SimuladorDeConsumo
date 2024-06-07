@@ -26,23 +26,23 @@
               <div class="devices">
                 <div class="room-info" *ngIf="item.temConfig">
                   <div>
-                    <span class="label">Velocidade 2.4GHz:</span>
-                    <span class="value">{{ item.speed2 + ' Mbps'}}</span>
-                  </div>
-                  <div>
                     <span class="label">Nível de sinal 2.4GHz:</span>
                     <span class="value">{{ item.level2 + ' dbm'}}</span>
-                  </div>
-                  <div>
-                    <span class="label">Velocidade 5GHz:</span>
-                    <span class="value">{{ item.speed5 + ' Mbps'}}</span>
                   </div>
                   <div>
                     <span class="label">Nível de sinal 5GHz:</span>
                     <span class="value">{{ item.level5 + ' dbm'}}</span>
                   </div>
                   <div>
-                    <span class="label">Interferência</span>
+                    <span class="label">Velocidade 2.4GHz:</span>
+                    <span class="value">{{ item.speed2 + ' Mbps'}}</span>
+                  </div>
+                  <div>
+                    <span class="label">Velocidade 5GHz:</span>
+                    <span class="value">{{ item.speed5 + ' Mbps'}}</span>
+                  </div>
+                  <div>
+                    <span class="label">Interferência:</span>
                     <span class="value">{{ item.interferencia + ' dbm'}}</span>
                   </div>
                 </div>
